@@ -1,0 +1,105 @@
+.register-form {
+  background-image: linear-gradient(#1b3645, #03242f);
+  border-radius: 16px;
+  padding: 30px 60px;
+  color: white;
+  h1 {
+    text-transform: uppercase;
+    font-family: "Pari-Match Regular";
+    text-align: center;
+    font-size: 50px;
+  }
+  .line {
+    input {
+      border-radius: 12px;
+      border: 1px solid #487783;
+      width: 100%;
+      background-color: #031b22;
+      height: 54px !important;
+      color: #bdd5db;
+      padding: 13px;
+      outline: none;
+    }
+    input:placeholder {
+      color: red !important;
+    }
+  }
+  .firstLine {
+    display: flex;
+    margin-bottom: 8px;
+    .css-13cymwt-control{
+      width: 96px;
+      height: 54px !important;
+      margin-right: 8px;
+      .css-art2ul-ValueContainer2{
+        height: 54px;
+      }
+    }
+  }
+  .errorBlock {
+    ul {
+      padding: 10px 21px;
+      color: #bdd4db;
+      margin-bottom: 8px;
+      font-size: 13px;
+    }
+  }
+  .checkbox-block {
+    background-color: #0b4b5d;
+    margin-bottom: 10px;
+    border-radius: 12px;
+    padding: 10px 16px;
+    justify-content: space-between;
+    align-items: center;
+    height: 56px;
+    .text {
+      font-family: "Roboto", sans-serif;
+      div:last-child {
+        font-size: 13px;
+        color: #f8ff13;
+      }
+    }
+    // &:after {
+    //   content: "";
+    //   width: 22px;
+    //   height: 22px;
+    //   border-radius: 5px;
+    //   background-color: #031b22;
+    // }
+    input[type="checkbox"] {
+      // display: none;
+      width: 22px;
+      height: 22px;
+      appearance: none;
+      background-color: #031b22;
+      border-radius: 5px;
+    }
+    input:ckecked[type="checkbox"] {
+      background-color: red;
+    }
+    input[type="checkbox"]:before {
+      // content:'sd'
+    }
+  }
+  .registerButton {
+    background: #f8ff13;
+    padding: 10px;
+    border-radius: 10px;
+    width: 100%;
+    height: 56px;
+    font-family: "Roboto";
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  p {
+    text-align: center;
+    margin-top: 23px;
+    margin-bottom: 25px;
+    font-family: 'Roboto', sans-serif;
+    a{
+      color: #f8ff13;
+      text-decoration: none;
+      font-family: 'Roboto', sans-serif;
+    }
+  }
+}

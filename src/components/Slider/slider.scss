@@ -1,10 +1,25 @@
 .slideC {
   position: relative;
   perspective: 1000px;
-  /* transform-style: preserve-3d;   */
   width: 362px;
   height: 272px;
   margin: 0 auto;
+  .sliderBtn {
+    position: absolute;
+    z-index: 30;
+    right: 50%;
+    top: 50%;
+    background-color: transparent;
+    color:white;
+    border: none;
+    width:30px;
+  }
+  .prev {
+    transform: translate(-186px, -16px);
+  }
+  .next { 
+    transform: translate(218px, -16px);
+  }
 }
 
 .slide {
@@ -14,12 +29,22 @@
     visibility 500ms ease 0s;
   position: absolute;
   top: 0;
-  /* background: orangered; */
   border-radius: 12px;
-  /* box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2); */
+  display: flex;
+  flex-direction: column;
+  color:white;
+  font-size: 28px;
+  img{
+    margin-bottom:20px;
+  }
+  .visible{
+    visibility: visible;
+  }
+  .hidden{
+    visibility: hidden;
+  }
 }
 
-/* 3d reflection effect */
 .slide::after {
   content: "";
   position: absolute;
@@ -27,7 +52,6 @@
   height: 60px;
   bottom: -60px;
   border-radius: 12px;
-  /* background: linear-gradient(to bottom, rgba(255, 68, 0, 0.2), transparent); */
 }
 
 .slide {
@@ -37,7 +61,6 @@
 }
 
 .slide h1 {
-  /* color: orangered; */
   background: white;
   padding: 20px;
   border-radius: 50%;

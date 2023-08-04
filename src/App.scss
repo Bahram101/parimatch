@@ -44,9 +44,37 @@
   #boxes {
     padding: 20px 0;
     background: #001724;
-    p{
+    overflow: hidden;
+    p {
       text-align: center;
-      color:white;
+      color: white;
+      margin-bottom: 40px;
+      color: #c5c5c5;
+      font-size: 32px;
+    }
+    .boxes-bottom {
+      text-align: center;
+      margin-top: 60px;
+      .buttonBlock {
+        background: url("./assets/images/box-btn.png") no-repeat;
+        margin: 0 auto;
+        position: relative;
+        width: 382px;
+        height: 108px;
+        cursor: pointer;
+        .textPart {
+          position: absolute;
+          font-family: "Pari-Match Regular";
+          color: black;
+          text-align: center;
+          font-size:50px;
+          left: 50%;
+          top:50%;
+          text-transform: uppercase;
+          transform: translate(-50%, -60%);
+     
+        }
+      }
     }
   }
 
@@ -58,12 +86,4 @@
   }
 }
 @media (min-width: 1400px) {
-  .container,
-  .container-lg,
-  .container-md,
-  .container-sm,
-  .container-xl,
-  .container-xxl {
-    max-width: 1510px;
-  }
 }
