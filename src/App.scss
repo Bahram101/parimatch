@@ -1,37 +1,112 @@
 @import "bootstrap/dist/css/bootstrap.min.css";
+@font-face {
+  font-family: "Gilroy";
+  src: url("./assets//fonts/Gilroy-Regular.woff");
+  src: url("./assets//fonts/Gilroy-Semibold.woff");
+}
 * {
   margin: 0;
   padding: 0;
 }
+
 .app {
   #main {
     height: 120vh;
     background: url("./assets/images/ban1.png") center / cover no-repeat;
     background-position: center;
+    position: relative;
     .header {
-      padding: 15px;
+      padding: 15px 30px;
+      align-items: center;
       .header-right {
+        .languages {
+          text-transform: uppercase;
+          font-weight: 400;
+          color: white;
+          font-size: 22px;
+          margin-right: 40px;
+          display: flex;
+          align-items: center;
+          span {
+            cursor: pointer;
+          }
+          span:first-child {
+            margin-right: 15px;
+            position: relative;
+            &:after {
+              content: "";
+              width: 2px;
+              height: 20px;
+              background-color: white;
+              position: absolute;
+              top: 7px;
+              right: -7px;
+            }
+          }
+          .active {
+            color: #f8ff13;
+            text-decoration: underline;
+          }
+        }
         .sign-in {
           button {
             background-color: #f8ff13;
             font-family: "Pari-Match Regular";
-            // padding: 3px 20px;
             text-transform: uppercase;
             width: 130px;
             height: 40px;
             border: none;
+            transform: skew(-13deg);
+            border-radius: 5px;
+            position: relative;
+
+            &:after {
+              content: "вход";
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%) skew(12deg);
+              font-size: 22px;
+            }
           }
         }
+      }
+    }
+    .center-block {
+      display: flex;
+      flex-direction: column;
+      .kzImg {
+        width: 430px;
+        margin-top: 90px;
+        margin-left: 226px;
+      }
+      .ruImg {
+        width: 650px;
+        margin-left: 356px;
+      }
+      .center-block__text {
+        font-family: "Pari-Match Regular";
+        font-size: 74px;
+        margin-left: 261px;
+        line-height: 1;
       }
     }
   }
 
   #rules {
-    padding: 20px 0;
+    // padding: 20px 0;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     background-image: url("./assets/images/rules-back.png");
+    .rules-inner {
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+    h2 {
+      margin-bottom: 40px;
+    }
     .rules-list {
       .rule {
         p {
@@ -51,30 +126,6 @@
       margin-bottom: 40px;
       color: #c5c5c5;
       font-size: 32px;
-    }
-    .boxes-bottom {
-      text-align: center;
-      margin-top: 60px;
-      .buttonBlock {
-        background: url("./assets/images/box-btn.png") no-repeat;
-        margin: 0 auto;
-        position: relative;
-        width: 382px;
-        height: 108px;
-        cursor: pointer;
-        .textPart {
-          position: absolute;
-          font-family: "Pari-Match Regular";
-          color: black;
-          text-align: center;
-          font-size:50px;
-          left: 50%;
-          top:50%;
-          text-transform: uppercase;
-          transform: translate(-50%, -60%);
-     
-        }
-      }
     }
   }
 

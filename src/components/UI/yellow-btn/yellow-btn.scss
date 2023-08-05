@@ -1,0 +1,23 @@
+.yellowBtn {
+  text-align: center;
+  margin-top: 60px;
+  .buttonBlock {
+    background: url("../../../assets/images/box-btn.png") no-repeat;
+    // margin: 0 auto;
+    position: relative;
+    width: 382px;
+    height: 108px;
+    cursor: pointer;
+    .textPart {
+      position: absolute;
+      font-family: "Pari-Match Regular";
+      color: black;
+      text-align: center;
+      font-size: 50px;
+      left: 50%;
+      top: 50%;
+      text-transform: uppercase;
+      transform: translate(-50%, -60%);
+    }
+  }
+}

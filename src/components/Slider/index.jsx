@@ -64,7 +64,7 @@ export const Slider = () => {
         opacity: 1,
         transform: "translateX(-1200px) translateZ(-1000px) rotateY(0deg)",
         zIndex: 8,
-        filter: "blur(7px)",
+        filter: "blur(9px)",
       
       };
     else if (activeSlide + 2 === index)
@@ -72,7 +72,7 @@ export const Slider = () => {
         opacity: 1,
         transform: "translateX(1200px) translateZ(-1000px) rotateY(0deg)",
         zIndex: 8,
-        filter: "blur(7px)",
+        filter: "blur(9px)",
    
       };
     else if (index < activeSlide - 2)
@@ -80,7 +80,7 @@ export const Slider = () => {
         opacity: 0,
         transform: "translateX(-480px) translateZ(-500px) rotateY(35deg)",
         zIndex: 7,
-        filter: "blur(7px)",
+        filter: "blur(9px)",
 
       };
     else if (index > activeSlide + 2)
@@ -88,7 +88,7 @@ export const Slider = () => {
         opacity: 0,
         transform: "translateX(480px) translateZ(-500px) rotateY(-35deg)",
         zIndex: 7,
-        filter: "blur(7px)",
+        filter: "blur(9px)",
       };
   };
 

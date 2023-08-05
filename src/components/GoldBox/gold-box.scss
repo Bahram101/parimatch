@@ -1,21 +1,62 @@
+@font-face {
+  font-family: "Gilroy";
+  src: url("../../assets//fonts/Gilroy-Regular.woff");
+}
+
 .goldBox {
   width: 972px;
-
-  border-radius: 10px;
+  color: #d7e0e0;
+  border-radius: 16px;
+  height: 555px;
   .goldBox__left {
     background-image: linear-gradient(#1b3645, #03242f);
+    padding: 40px 50px;
     width: 60%;
+    border-radius: 16px 0 0 16px;
+    border-collapse: collapse;
     h2 {
       font-family: "Roboto", sans-serif;
       font-size: 43px;
+      text-align: left;
+      margin-bottom: 15px;
+    }
+    .desc,
+    .importantBlock {
+      font-size: 23px !important;
+      text-align: left !important;
+      margin: 0 0 10px 0 !important;
+      font-family: "Gilroy", sans-serif;
+      line-height: 1.2;
+    }
+    table {
+      width: 100%;
+      margin: 0;
+      border: 1px solid #4b5f67;
+      border-radius: 1em;
+      border-collapse: collapse;
+      margin-bottom: 10px;
+      font-size: 18px;
+      tr {
+        td {
+          width: 50%;
+          text-align: center;
+          border: 1px solid #4b5f67;
+          border-radius: 7px;
+          height: 40px;
+        }
+      }
     }
   }
   .goldBox__right {
-    background-color: blue;
+    background-color: #1b3645;
+    border-radius: 0 16px 16px 0;
     width: 40%;
-    h2 {
-      font-family: "Roboto", sans-serif;
-      font-size: 43px;
+    img {
+      transform: translate(27%, -44%);
+      position: absolute;
+      top: 50%;
+      rotate: -18deg;
+      filter: drop-shadow(-29px 20px 39px #1a1a17);
     }
   }
 }
