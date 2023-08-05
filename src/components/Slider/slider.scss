@@ -36,7 +36,11 @@
   font-size: 28px;
   img{
     margin-bottom:20px;
+    &:hover{
+      cursor: pointer;
+    }
   }
+
   .visible{
     visibility: visible;
   }

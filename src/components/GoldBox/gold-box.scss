@@ -1,0 +1,21 @@
+.goldBox {
+  width: 972px;
+
+  border-radius: 10px;
+  .goldBox__left {
+    background-image: linear-gradient(#1b3645, #03242f);
+    width: 60%;
+    h2 {
+      font-family: "Roboto", sans-serif;
+      font-size: 43px;
+    }
+  }
+  .goldBox__right {
+    background-color: blue;
+    width: 40%;
+    h2 {
+      font-family: "Roboto", sans-serif;
+      font-size: 43px;
+    }
+  }
+}

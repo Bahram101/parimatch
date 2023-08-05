@@ -15,7 +15,7 @@ function App() {
 
   return (
     <>
-      <Modal active={modalActive} setActive={setModalActive}>
+      <Modal active={modalActive} setActive={setModalActive} width={732}>
         <RegisterForm/>
       </Modal>
       <div className="app">

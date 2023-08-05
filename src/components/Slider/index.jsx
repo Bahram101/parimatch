@@ -5,9 +5,13 @@ import box3 from "../../assets/images/box3.png";
 import box4 from "../../assets/images/box4.png";
 import box5 from "../../assets/images/box5.png";
 import { TfiArrowCircleLeft, TfiArrowCircleRight } from "react-icons/tfi";
+import { AiOutlineInfoCircle } from "react-icons/ai";
 import "./slider.scss";
+import { Modal } from "../Modal";
+import GoldBox from "../GoldBox";
 
 export const Slider = () => {
+  const [activeGoldBox, setActiveGoldBox] = useState(false);
   const [activeSlide, setactiveSlide] = useState(2);
   const [touches, settouches] = useState({ xDown: null, xUp: null });
   const next = () => activeSlide < 5 - 1 && setactiveSlide(activeSlide + 1);
@@ -39,7 +43,7 @@ export const Slider = () => {
       return {
         opacity: 1,
         transform: "translateX(0px) translateZ(0px) rotateY(0deg)",
-        zIndex: 10,
+        zIndex: 10, 
       };
     else if (activeSlide - 1 === index)
       return {
@@ -61,6 +65,7 @@ export const Slider = () => {
         transform: "translateX(-1200px) translateZ(-1000px) rotateY(0deg)",
         zIndex: 8,
         filter: "blur(7px)",
+      
       };
     else if (activeSlide + 2 === index)
       return {
@@ -68,6 +73,7 @@ export const Slider = () => {
         transform: "translateX(1200px) translateZ(-1000px) rotateY(0deg)",
         zIndex: 8,
         filter: "blur(7px)",
+   
       };
     else if (index < activeSlide - 2)
       return {
@@ -75,6 +81,7 @@ export const Slider = () => {
         transform: "translateX(-480px) translateZ(-500px) rotateY(35deg)",
         zIndex: 7,
         filter: "blur(7px)",
+
       };
     else if (index > activeSlide + 2)
       return {
@@ -87,6 +94,9 @@ export const Slider = () => {
 
   return (
     <>
+      <Modal active={activeGoldBox} setActive={setActiveGoldBox} width={972}>
+        <GoldBox/>
+      </Modal>
       <div
         className="slideC"
         onTouchStart={handleTouchStart}
@@ -112,9 +122,15 @@ export const Slider = () => {
           </div>
         </div>
         <div className="slide" style={getStyles(2)}>
-          <img src={box3} />
+          <img
+            src={box3}
+            onClick={() => {
+              console.log("bbbb");
+              setActiveGoldBox(true);
+            }}
+          />
           <div className={activeSlide == 2 ? "visible" : "hidden"}>
-            Золотой сундук
+            Золотой сундук <AiOutlineInfoCircle />
           </div>
         </div>
         <div className="slide" style={getStyles(3)}>

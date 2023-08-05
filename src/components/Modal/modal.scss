@@ -13,12 +13,11 @@
   pointer-events: none;
   transition: 0.5s;
 
-  .modal-content {
-    // padding: 20px;
-    border-radius: 16px !important;
-    max-width: 732px;
-    transform: scale(0.5);
+  .modal-content { 
+    border-radius: 16px !important; 
+    transform: scale(0.1);
     transition: 0.5s all;
+    background-color: red;
   }
   .modal-content.active {
     transform: scale(1);
