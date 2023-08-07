@@ -94,7 +94,7 @@ export const Slider = () => {
 
   return (
     <>
-      <Modal active={activeGoldBox} setActive={setActiveGoldBox} width={972}>
+      <Modal active={activeGoldBox} setActive={setActiveGoldBox} >
         <GoldBox/>
       </Modal>
       <div
@@ -124,8 +124,7 @@ export const Slider = () => {
         <div className="slide" style={getStyles(2)}>
           <img
             src={box3}
-            onClick={() => {
-              console.log("bbbb");
+            onClick={() => { 
               setActiveGoldBox(true);
             }}
           />

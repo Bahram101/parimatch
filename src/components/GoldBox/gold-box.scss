@@ -4,10 +4,11 @@
 }
 
 .goldBox {
-  width: 972px;
+  max-width: 972px;
   color: #d7e0e0;
-  border-radius: 16px;
-  height: 555px;
+  margin: 20px;
+  border-radius: 16px; 
+  margin:0 auto; 
   .goldBox__left {
     background-image: linear-gradient(#1b3645, #03242f);
     padding: 40px 50px;
@@ -25,7 +26,7 @@
       font-size: 23px !important;
       text-align: left !important;
       margin: 0 0 10px 0 !important;
-      font-family: "Gilroy", sans-serif;
+      // font-family: "Gilroy", sans-serif;
       line-height: 1.2;
     }
     table {
@@ -51,6 +52,7 @@
     background-color: #1b3645;
     border-radius: 0 16px 16px 0;
     width: 40%;
+    position: relative;
     img {
       transform: translate(27%, -44%);
       position: absolute;
@@ -60,3 +62,5 @@
     }
   }
 }
+
+ 

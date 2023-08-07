@@ -55,7 +55,7 @@ function App() {
             <img src={kzImg} className="textImg kzImg" alt="" />
             <img src={ruImg} className="textImg ruImg" alt="" />
             <div className="center-block__text">В любую точку мира</div>
-            <div className="yellowBtn">
+            <div className="yellowBtn first">
               <YellowBtn setModalActive={setModalActive} />
             </div>
           </div>
@@ -84,7 +84,7 @@ function App() {
                 </Col>
                 <Col xl={3} lg={6} md={6} xs={12}>
                   <div className="rule">
-                    <img src={rule3} alt="" height="242.67" />
+                    <img src={rule3} alt="" width="280" />
                     <p>
                       Набирайте баллы и поднимайтесь в рейтинге. Чем выше
                       рейтинг, тем больше вероятность выигрыша
@@ -105,7 +105,7 @@ function App() {
           <h2>Сундуки</h2>
           <p>Чем выше место в рейтиге, тем выше шанс выиграть призы</p>
           <Slider />
-          <div className="yellowBtn">
+          <div className="yellowBtn second">
             <YellowBtn setModalActive={setModalActive} block="boxes" />
           </div>
         </section>

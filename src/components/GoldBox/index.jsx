@@ -38,8 +38,8 @@ const GoldBox = () => {
           награду до окончания акции
         </p>
       </div>
-      <div className="goldBox__right">
-        <img src={box3} alt="" width="407" />
+      <div className="goldBox__right"> 
+        <img src={box3} alt="" width="407" className="goldModalImg" />
       </div>
     </div>
   );
