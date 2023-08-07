@@ -43,7 +43,7 @@ export const Slider = () => {
       return {
         opacity: 1,
         transform: "translateX(0px) translateZ(0px) rotateY(0deg)",
-        zIndex: 10, 
+        zIndex: 10,
       };
     else if (activeSlide - 1 === index)
       return {
@@ -65,7 +65,6 @@ export const Slider = () => {
         transform: "translateX(-1200px) translateZ(-1000px) rotateY(0deg)",
         zIndex: 8,
         filter: "blur(9px)",
-      
       };
     else if (activeSlide + 2 === index)
       return {
@@ -73,7 +72,6 @@ export const Slider = () => {
         transform: "translateX(1200px) translateZ(-1000px) rotateY(0deg)",
         zIndex: 8,
         filter: "blur(9px)",
-   
       };
     else if (index < activeSlide - 2)
       return {
@@ -81,7 +79,6 @@ export const Slider = () => {
         transform: "translateX(-480px) translateZ(-500px) rotateY(35deg)",
         zIndex: 7,
         filter: "blur(9px)",
-
       };
     else if (index > activeSlide + 2)
       return {
@@ -94,8 +91,8 @@ export const Slider = () => {
 
   return (
     <>
-      <Modal active={activeGoldBox} setActive={setActiveGoldBox} >
-        <GoldBox/>
+      <Modal active={activeGoldBox} setActive={setActiveGoldBox}>
+        <GoldBox />
       </Modal>
       <div
         className="slideC"
@@ -110,13 +107,13 @@ export const Slider = () => {
         </button>
 
         <div className="slide" style={getStyles(0)}>
-          <img src={box1} />
-          <div className={activeSlide == 0 ? "visible" : "hidden"}>
+          <img src={box1} className="box1" />
+          <div className={activeSlide == 0 ? " visible" : "hidden"}>
             Бронзовый сундук
           </div>
         </div>
         <div className="slide" style={getStyles(1)}>
-          <img src={box2} />
+          <img src={box2} className="box2" />
           <div className={activeSlide == 1 ? "visible" : "hidden"}>
             Серебряный сундук
           </div>
@@ -124,22 +121,23 @@ export const Slider = () => {
         <div className="slide" style={getStyles(2)}>
           <img
             src={box3}
-            onClick={() => { 
+            className="box3"
+            onClick={() => {
               setActiveGoldBox(true);
             }}
           />
           <div className={activeSlide == 2 ? "visible" : "hidden"}>
-            Золотой сундук <AiOutlineInfoCircle />
+            Золотой  <AiOutlineInfoCircle />
           </div>
         </div>
         <div className="slide" style={getStyles(3)}>
-          <img src={box4} />
+          <img src={box4} className="box4" />
           <div className={activeSlide == 3 ? "visible" : "hidden"}>
             Платиновый сундук
           </div>
         </div>
         <div className="slide" style={getStyles(4)}>
-          <img src={box5} />
+          <img src={box5} className="box5" />
           <div className={activeSlide == 4 ? "visible" : "hidden"}>
             Алмазный сундук
           </div>

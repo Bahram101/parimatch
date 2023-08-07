@@ -29,11 +29,11 @@
   .firstLine {
     display: flex;
     margin-bottom: 8px;
-    .css-13cymwt-control{
+    .css-13cymwt-control {
       width: 96px;
       height: 54px !important;
       margin-right: 8px;
-      .css-art2ul-ValueContainer2{
+      .css-art2ul-ValueContainer2 {
         height: 54px;
       }
     }
@@ -97,11 +97,42 @@
     text-align: center;
     margin-top: 23px;
     margin-bottom: 25px;
-    font-family: 'Roboto', sans-serif;
-    a{
+    font-family: "Roboto", sans-serif;
+    a {
       color: #f8ff13;
       text-decoration: none;
-      font-family: 'Roboto', sans-serif;
+      font-family: "Roboto", sans-serif;
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .register-form {
+    padding: 20px;
+    h1 {
+      font-size: 32px;
+    }
+    .line {
+      input {
+        height: 44px;
+      }
+    }
+    .checkbox-block{
+      height: 45px;
+      .text{
+        div:first-child{
+          font-size: 12px;
+        }
+        div:last-child{
+          font-size: 10px;
+        }
+      }
+    }
+    .registerButton{
+      height: 45px;
+    }
+    p{
+      margin-bottom: 10px;
     }
   }
 }

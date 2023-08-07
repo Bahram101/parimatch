@@ -11,6 +11,7 @@ import { Slider } from "./components/Slider";
 import { Modal } from "./components/Modal";
 import RegisterForm from "./components/RegisterForm";
 import YellowBtn from "./components/UI/yellow-btn";
+import mobi from "../src/assets/images/mobi.png";
 
 function App() {
   const [modalActive, setModalActive] = React.useState(false);
@@ -48,6 +49,7 @@ function App() {
               </div>
               <div className="sign-in">
                 <button> </button>
+                <img src={mobi} alt="" className="d-block d-sm-none" />
               </div>
             </div>
           </header>
@@ -63,9 +65,17 @@ function App() {
         <section id="rules">
           <div className="rules-inner">
             <Container>
+              <div className="rules__tagline d-block d-sm-none" >
+                <img src={kzImg} className="textImg kzImg" alt="" />
+                <img src={ruImg} className="textImg ruImg" alt="" />
+                <div className="center-block__text">В любую точку мира</div>
+                <div className="yellowBtn tagline">
+                  <YellowBtn setModalActive={setModalActive} />
+                </div>
+              </div>
               <h2>Как принять участие</h2>
               <Row className="rules-list d-flex">
-                <Col xl={3} lg={6} md={6} xs={12}>
+                <Col xl={3} lg={6} md={6} xs={12} className="colItem">
                   <div className="rule">
                     <img src={rule1} alt="" width="280" />
                     <p>
@@ -73,7 +83,7 @@ function App() {
                     </p>
                   </div>
                 </Col>
-                <Col xl={3} lg={6} md={6} xs={12}>
+                <Col xl={3} lg={6} md={6} xs={12} className="colItem">
                   <div className="rule">
                     <img src={rule2} alt="" width="280" />
                     <p>
@@ -82,7 +92,7 @@ function App() {
                     </p>
                   </div>
                 </Col>
-                <Col xl={3} lg={6} md={6} xs={12}>
+                <Col xl={3} lg={6} md={6} xs={12} className="colItem">
                   <div className="rule">
                     <img src={rule3} alt="" width="280" />
                     <p>
@@ -91,7 +101,7 @@ function App() {
                     </p>
                   </div>
                 </Col>
-                <Col xl={3} lg={6} md={6} xs={12}>
+                <Col xl={3} lg={6} md={6} xs={12} className="colItem">
                   <div className="rule">
                     <img src={rule4} alt="" width="280" />
                     <p>Получайте гарантированные призы и бонусы</p>
