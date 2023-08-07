@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import ruFlag from "../../assets/images/russia.png";
 import kzFlag from "../../assets/images/kazakhstan.png";
 import uzFlag from "../../assets/images/uzbekistan.png";
@@ -7,53 +7,77 @@ import Select from "react-select";
 import "./register-form.scss";
 
 const RegisterForm = () => {
-  const [selectedCountry, setSelectedCountry] = React.useState({
-    value: "kz",
-    flag: kzFlag,
-  });
-  const options = [
-    { value: "ru", flag: ruFlag },
-    { value: "kz", flag: kzFlag },
-    { value: "uz", flag: uzFlag },
-    { value: "tr", flag: trFlag },
-  ];
+  const initialValues = { phone: "+7", password: "" };
+  const [formValues, setFormValues] = useState(initialValues);
+  const [formErrors, setFormErrors] = useState({});
+  const [isSubmit, setIsSubmit] = useState(false);
 
-  const formatOptionLabel = ({ value, label, flag }) => (
-    <div style={{ display: "flex", alignItems: "center" }}>
-      <img
-        src={flag}
-        alt={label}
-        style={{ width: "20px", marginRight: "8px" }}
-      />
-      {label}
-    </div>
-  );
+  useEffect(() => {
+    console.log(formErrors);
+    if (Object.keys(formErrors).length === 0 && isSubmit) {
+      console.log(formValues);
+    }
+  }, [formErrors]);
 
-  console.log(selectedCountry);
+  const handleChange = (e) => {
+    console.log('eeee',e)
+    const { name, value } = e.target;
+    console.log(name, value)
+    setFormValues({ ...formValues, [name]: value });
+  };
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setFormErrors(validate(formValues));
+    setIsSubmit(true);
+  };
+
+  const validate = (values) => {
+    const errors = {};
+    const regex = /^(\()?\d{3}(\))?(-|\s)?\d{3}(-|\s)\d{4}$/;
+
+    if (!values.phone) {
+      errors.phone = "Phone number is required!";
+    } else if (!regex.test(values.phone)) {
+      errors.phone = "This is not a valid phone format!";
+    }
+    if (!values.password) {
+      errors.password = "Password is required";
+    } else if (values.password.length < 6) {
+      errors.password = "Password must be more than 6 characters";
+    }
+    // else  (values.password.length > 10) {
+    //   errors.password = "Password cannot exceed more than 10 characters";
+    // }
+    return errors;
+  };
+ 
   return (
     <div className="register-form">
       <h1>Регистрация</h1>
-      <form>
+      <form onSubmit={handleSubmit}>
         <div className="line firstLine">
-          <Select
-            options={options}
-            value={selectedCountry}
-            onChange={setSelectedCountry}
-            formatOptionLabel={formatOptionLabel}
+          <input
+            type="text"
+            className="phone-number"
+            placeholder="+7xx xxx xx xx"
+            name="phone"
+            value={formValues.phone}
+            onChange={handleChange}
           />
-          
-          <input type="text" className="phone-number" />
         </div>
+        <span className="message">{formErrors.phone}</span>
         <div className="line secondLine">
-          <input type="password" className="password" placeholder="Пароль" />
+          <input
+            type="password"
+            className="password"
+            placeholder="Пароль"
+            name="password"
+            value={formValues.password}
+            onChange={handleChange}
+          />
         </div>
-        <div className="errorBlock">
-          <ul>
-            <li>минимум 6 символов</li>
-            <li>минимум 1 цифра</li>
-          </ul>
-        </div>
+        <span className="message">{formErrors.password}</span>
         <div className="checkbox-block year d-flex">
           <div className="text">
             <div>Мне больше 21 года</div>
@@ -68,7 +92,9 @@ const RegisterForm = () => {
           </div>
           {/* <input type="checkbox" className="checkbox" /> */}
         </div>
-        <button className="registerButton">Зарегистрироваться</button>
+        <button className="registerButton" onClick={(e) => validate(e)}>
+          Зарегистрироваться
+        </button>
         <p>
           Есть аккаунт? <a href="#">Войти</a>
         </p>

@@ -11,7 +11,7 @@
     text-align: center;
     font-size: 50px;
   }
-  .line {
+  .line { 
     input {
       border-radius: 12px;
       border: 1px solid #487783;
@@ -26,9 +26,16 @@
       color: red !important;
     }
   }
+  .message{
+    color: #bdd4db;
+    // margin-bottom: 8px;
+    font-size: 13px;
+    margin-left: 5px;
+    display: inline-block;
+  }
   .firstLine {
     display: flex;
-    margin-bottom: 8px;
+    // margin-bottom: 8px;
     .css-13cymwt-control {
       width: 96px;
       height: 54px !important;
@@ -37,6 +44,9 @@
         height: 54px;
       }
     }
+  }
+  .secondLine{
+    margin-top:8px;
   }
   .errorBlock {
     ul {
@@ -54,6 +64,9 @@
     justify-content: space-between;
     align-items: center;
     height: 56px;
+    &.year{
+      margin-top: 10px;
+    }
     .text {
       font-family: "Roboto", sans-serif;
       div:last-child {
@@ -114,7 +127,7 @@
     }
     .line {
       input {
-        height: 44px;
+        height: 44px !important;
       }
     }
     .checkbox-block{
