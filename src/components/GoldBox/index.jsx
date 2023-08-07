@@ -1,12 +1,15 @@
 import "./gold-box.scss";
-import box3 from '../../assets/images/box3.png'
-
-const GoldBox = () => {
+import box3 from "../../assets/images/box3.png";
+import { IoCloseOutline } from "react-icons/io5";
+const GoldBox = ({setActive}) => {
   return (
     <div className="goldBox d-flex">
+      <IoCloseOutline className="closeIcon" onClick={()=>setActive(false)}/>
       <div className="goldBox__left">
         <h2>Золотой сундук</h2>
-        <p className="desc">Из этого сундука вы можете получить один из следующих призов:</p>
+        <p className="desc">
+          Из этого сундука вы можете получить один из следующих призов:
+        </p>
         <table>
           <tr>
             <td>Очки в турнире</td>
@@ -38,7 +41,7 @@ const GoldBox = () => {
           награду до окончания акции
         </p>
       </div>
-      <div className="goldBox__right"> 
+      <div className="goldBox__right">
         <img src={box3} alt="" width="407" className="goldModalImg" />
       </div>
     </div>

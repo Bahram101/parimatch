@@ -92,7 +92,7 @@ export const Slider = () => {
   return (
     <>
       <Modal active={activeGoldBox} setActive={setActiveGoldBox}>
-        <GoldBox />
+        <GoldBox setActive={setActiveGoldBox}/>
       </Modal>
       <div
         className="slideC"

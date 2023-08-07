@@ -12,7 +12,8 @@
   opacity: 0;
   pointer-events: none;
   transition: 0.5s;
-
+  background-image: url('../../assets/images/ban2.png')  center / cover no-repeat; 
+  background-position: center;
   .modal-content { 
     border-radius: 16px !important; 
     transform: scale(0.1);

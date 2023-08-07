@@ -4,14 +4,26 @@
   padding: 30px 60px;
   color: white;
   max-width: 732px;
-  margin: 0 20px;
+  position: relative;
+  svg.closeIcon {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background-color: #2e5d74;
+    width: 23px;
+    height: 23px;
+    border-radius: 50%;
+    z-index: 1;
+    cursor: pointer;
+  }
   h1 {
     text-transform: uppercase;
     font-family: "Pari-Match Regular";
     text-align: center;
     font-size: 50px;
+    margin-bottom: 15px;
   }
-  .line { 
+  .line {
     input {
       border-radius: 12px;
       border: 1px solid #487783;
@@ -26,7 +38,7 @@
       color: red !important;
     }
   }
-  .message{
+  .message {
     color: #bdd4db;
     // margin-bottom: 8px;
     font-size: 13px;
@@ -45,8 +57,16 @@
       }
     }
   }
-  .secondLine{
-    margin-top:8px;
+  .secondLine {
+    position: relative;
+    display: flex;
+    align-items: center;
+    svg {
+      position: absolute;
+      right: 0;
+      right: 13px;
+      cursor: pointer;
+    }
   }
   .errorBlock {
     ul {
@@ -64,8 +84,8 @@
     justify-content: space-between;
     align-items: center;
     height: 56px;
-    &.year{
-      margin-top: 10px;
+    &.year {
+      // margin-top: 10px;
     }
     .text {
       font-family: "Roboto", sans-serif;
@@ -74,26 +94,23 @@
         color: #f8ff13;
       }
     }
-    // &:after {
-    //   content: "";
-    //   width: 22px;
-    //   height: 22px;
-    //   border-radius: 5px;
-    //   background-color: #031b22;
-    // }
+
     input[type="checkbox"] {
-      // display: none;
-      width: 22px;
-      height: 22px;
-      appearance: none;
+      position: relative;
+      width: 20px;
+      height: 20px;
+      -webkit-appearance: none;
       background-color: #031b22;
       border-radius: 5px;
+      border: none; /* Добавьте это, чтобы убрать рамку */
     }
-    input:ckecked[type="checkbox"] {
-      background-color: red;
-    }
-    input[type="checkbox"]:before {
-      // content:'sd'
+
+    input:checked[type="checkbox"] {
+      background-color: #f8ff13;
+      background-image: url("../../assets/images/check3.png");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
     }
   }
   .registerButton {
@@ -130,21 +147,21 @@
         height: 44px !important;
       }
     }
-    .checkbox-block{
+    .checkbox-block {
       height: 45px;
-      .text{
-        div:first-child{
+      .text {
+        div:first-child {
           font-size: 12px;
         }
-        div:last-child{
+        div:last-child {
           font-size: 10px;
         }
       }
     }
-    .registerButton{
+    .registerButton {
       height: 45px;
     }
-    p{
+    p {
       margin-bottom: 10px;
     }
   }

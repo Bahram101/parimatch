@@ -7,8 +7,20 @@
   max-width: 972px;
   color: #d7e0e0;
   margin: 20px;
-  border-radius: 16px; 
-  margin:0 auto; 
+  border-radius: 16px;
+  margin: 0 auto;
+  position: relative;
+  svg.closeIcon {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background-color: #2e5d74;
+    width: 23px;
+    height: 23px;
+    border-radius: 50%;
+    z-index: 1;
+    cursor: pointer;
+  }
   .goldBox__left {
     background-image: linear-gradient(#1b3645, #03242f);
     padding: 40px 50px;
@@ -62,5 +74,3 @@
     }
   }
 }
-
- 
